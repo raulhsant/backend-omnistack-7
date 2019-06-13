@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
 
-const PostSchema =  new mongoose.Schema({
-    author: String,
-    place: String,
-    description: String,
-    hashtags: String,
-    likes: {
-        type: Number,
-        default: 0
-    }
+const PostSchema = new mongoose.Schema({
+  author: String,
+  place: String,
+  description: String,
+  hashtags: String,
+  image: String,
+  likes: {
+    type: Number,
+    default: 0
+  }
 }, {
     timestamps: true,
-});
+  });
 
-module.export =  mongoose.model('Post', PostSchema)
+module.exports = mongoose.model('Post', PostSchema)
